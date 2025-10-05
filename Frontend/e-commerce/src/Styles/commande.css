@@ -1,0 +1,183 @@
+:root {
+  --brandBlack: #010100;   /* Deep Black */
+  --goldLight: #b28727;    /* Light Gold */
+  --goldDark: #52401c;     /* Dark Brown Gold */
+  --goldBrown: #b28727;    /* Golden Brown */
+}
+/*      CONTAINER GLOBAL     */
+.commande-container {
+  font-family: "Poppins", sans-serif;
+  color: var(--brandBlack);
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background: #f9f9f9;
+}
+/*     STRUCTURE LAYOUT      */
+.row {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.commande-form {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.commande-resume {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+/*          CARDS            */
+.commande-card,
+.resume-card {
+  background: #fff;
+  padding: 25px;
+  border: 1px solid var(--goldLight);
+  border-radius: 12px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.commande-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--goldDark);
+  margin-bottom: 20px;
+}
+
+.commande-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: var(--goldLight);
+}
+/*        FORM INPUTS        */
+.commande-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--goldLight);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.commande-input:focus {
+  border-color: var(--goldDark);
+  box-shadow: 0 0 5px var(--goldLight);
+  outline: none;
+}
+/*          BUTTONS          */
+.commande-btn {
+  display: block;
+  width: 100%;
+  background: var(--goldLight);
+  border: none;
+  font-weight: bold;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.commande-btn:hover {
+  background: var(--goldDark);
+}
+/*      RADIO & CHECKBOX     */
+.radio-group,
+.checkbox-group {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.custom-radio .form-check-input,
+.custom-checkbox .form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border: 2px solid var(--goldLight);
+  cursor: pointer;
+  accent-color: var(--goldLight); 
+}
+
+.custom-radio .form-check-label,
+.custom-checkbox .form-check-label {
+  font-weight: 500;
+  color: var(--brandBlack);
+  cursor: pointer;
+}
+.custom-radio .form-check-input {
+  border-radius: 50%;
+}
+
+.custom-radio .form-check-input:checked {
+  background-color: var(--goldLight);
+  border-color: var(--goldDark);
+}
+
+.custom-checkbox .form-check-input {
+  border-radius: 4px;
+}
+/*         RÉSUMÉ PANIER     */
+.resume-title {
+  font-size: 1.4rem;
+  color: var(--goldDark);
+  margin-bottom: 15px;
+}
+
+.resume-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.resume-total {
+  font-weight: bold;
+  color: var(--goldLight);
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+/*         RESPONSIVE        */
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .commande-form,
+  .commande-resume {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .commande-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .commande-card,
+  .resume-card {
+    padding: 15px;
+  }
+
+  .commande-title {
+    font-size: 1.3rem;
+  }
+
+  .resume-title {
+    font-size: 1.2rem;
+  }
+
+  .resume-total {
+    font-size: 1.1rem;
+  }
+}

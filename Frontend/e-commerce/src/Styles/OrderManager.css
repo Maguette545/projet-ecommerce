@@ -1,0 +1,107 @@
+:root {
+  --brandBlack: #010100;
+  --goldLight: #b28727;
+  --goldDark: #52401c;
+  --goldBrown: #b28727;
+  --dangerRed: #ff4d4f;
+  --dangerRedHover: #d9363e;
+}
+
+/* Container */
+.order-manager {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* Titre */
+.manager-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--brandBlack);
+  margin-bottom: 25px;
+}
+
+/* Grid des commandes */
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Carte commande */
+.order-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Texte */
+.order-card h3 {
+  margin-bottom: 8px;
+  color: var(--brandBlack);
+}
+
+.order-card p, .order-card ul {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.order-card ul {
+  padding-left: 18px;
+}
+
+/* Actions */
+.order-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.status-select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--goldLight);
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: var(--goldDark);
+  box-shadow: 0 0 6px rgba(178,135,39,0.2);
+}
+
+.delete-btn {
+  background-color: var(--dangerRed);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: var(--dangerRedHover);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .order-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,161 @@
+:root {
+  --brandBlack: #010100;
+  --goldLight: #b28727;
+  --goldDark: #52401c;
+  --goldBrown: #b28727;
+}
+
+/* Container principal */
+.product-manager {
+  padding: 20px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Titre */
+.manager-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--brandBlack);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulaire */
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--goldLight);
+  width: 180px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--goldDark);
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(178, 135, 39, 0.2);
+}
+
+/* Bouton submit */
+.submit-btn {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, var(--goldLight), var(--goldDark));
+  color: var(--brandBlack);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, var(--goldDark), var(--goldLight));
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Grille produits */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Carte produit */
+.product-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Texte */
+.product-name {
+  font-weight: bold;
+  color: var(--brandBlack);
+  margin-bottom: 6px;
+}
+
+.product-desc, .product-info {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.product-price {
+  color: var(--goldDark);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* Actions */
+.product-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background-color: var(--goldLight);
+  color: var(--brandBlack);
+}
+
+.edit-btn:hover {
+  background-color: var(--goldDark);
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d9363e;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .product-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+}

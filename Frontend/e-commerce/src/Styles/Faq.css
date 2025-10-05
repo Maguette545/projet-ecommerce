@@ -1,0 +1,28 @@
+.faq-container {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 20px;
+}
+.faq-container .accordion-header{
+  background-color: #010100;
+  color: #fff;
+}
+.faq-container .accordion-item {
+  background-color: #010100;
+  color: #fff;
+  margin-bottom: 15px; /* espace entre les FAQ */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.faq-container .accordion-button {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.faq-container .accordion-button:not(.collapsed) {
+  background-color: #e4c462; /* or doré quand ouvert */
+  color: #fff;
+}

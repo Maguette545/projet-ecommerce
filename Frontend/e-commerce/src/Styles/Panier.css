@@ -1,0 +1,104 @@
+:root {
+  --brandBlack: #010100;
+  --goldLight: #b28727;
+  --goldDark: #52401c;
+  --goldBrown: #b28727;
+}
+.panier-container{
+    text-align: center;
+    padding: 20px 270px 20px 270px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.panier-title{
+    padding-bottom: 40px;
+    font-size: 30px;
+    font-weight: 700;
+}
+/* Carte produit panier */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border: 1px solid var(--goldLight);
+}
+
+/* Image produit */
+.cart-item img {
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--goldDark);
+}
+
+/* Infos produit */
+.cart-item h5 {
+  color: var(--brandBlack);
+  margin-bottom: 0.2rem;
+}
+.cart-item p {
+  margin: 0.2rem 0;
+}
+.cart-item .price {
+  color: var(--goldDark);
+  font-weight: bold;
+}
+
+/* Badges taille et longueur */
+.cart-item .badge-size {
+  background-color: var(--brandBlack);
+  color: var(--goldBrown);
+  margin-right: 15px;
+}
+.cart-item .badge-length {
+  background-color: var(--brandBlack);
+  color: var(--goldBrown);
+}
+
+/* Boutons quantité et supprimer */
+.cart-item .btn-qty,
+.cart-item .btn-remove {
+  border-radius: 8px;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  margin: 2px;
+  transition: all 0.2s ease;
+}
+
+.cart-item .btn-qty {
+  background-color: var(--brandBlack);
+  border-color: var(--brandBlack);
+  color: var(--goldLight);
+}
+
+.cart-item .btn-qty:hover {
+  background-color: var(--goldLight);
+  color: var(--brandBlack);
+}
+
+.cart-item .btn-remove {
+  background-color: var(--goldLight);
+  border-color: var(--goldDark);
+  color: var(--brandBlack);
+}
+
+.cart-item .btn-remove:hover {
+  background-color: var(--goldDark);
+  color: var(--goldLight);
+}
+
+.btn-continue{
+  height: 900px;
+  background-color: var(--goldLight);
+  color: var(--brandBlack);
+}
+.btn-continue:hover{
+  background-color: var(--brandBlack);
+  color: var(--goldLight);
+}

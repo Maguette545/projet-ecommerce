@@ -1,0 +1,33 @@
+.apropos-container{
+    max-width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    padding: 20px 60px 60px 60px;
+}
+.apropos-container h1{
+    text-align: center;
+    font-weight: 1000px;
+    margin-bottom: 20px;
+    color: #b28727;
+}
+section{
+    background-color: #010100;
+    color: white;
+    height: 180px;
+    margin-top: 20px;
+    padding: 0 30px;
+    border-radius: 20px;
+    border-left: 20px solid #b28727;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+section h2{
+    text-align: center;
+    color: #b28727;
+    font-weight: 500;
+    padding-top: 7px;
+    padding-bottom: 15px;
+}
+section p a{
+    text-decoration: underline;
+    color: #b28727;
+}

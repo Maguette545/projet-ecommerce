@@ -1,0 +1,200 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar fixe */
+.navb {
+  background-color: #010100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  color: #b28727;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Ajouter un espace dynamique en haut pour éviter que le contenu soit caché */
+body > *:first-child {
+  margin-top: 60px; /* égale à la hauteur de navbar par défaut */
+}
+
+/* Logo */
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.Logo img {
+  width: 70px;
+  height: 70px;
+}
+.Logo h2 {
+  font-size: 1.1rem;
+  color: #b28727;
+  font-weight: bold;
+}
+
+/* Menu navigation */
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.navigation .menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation .menu li a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #b28727;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navigation .menu li a:hover {
+  color: #e4c462;
+}
+/*---------------- Responsive ----------------*/
+
+/* Tablettes grandes */
+@media (max-width: 1200px) {
+  .navigation .menu {
+    gap: 1.5rem;
+  }
+  .Logo h2 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablettes / mobiles moyens */
+@media (max-width: 768px) {
+  .navigation {
+    justify-content: flex-start;
+  }
+  .navigation .menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .Logo img {
+    width: 40px;
+    height: 40px;
+  }
+  .Logo h2 {
+    font-size: 0.8rem;
+  }
+  .fa svg {
+    width: 18px;
+    height: 18px;
+  }
+  /* Mettre un margin-top plus grand si la navbar devient plus haute */
+  body > *:first-child {
+    margin-top: 80px;
+  }
+}
+
+/* Mobiles petits */
+@media (max-width: 480px) {
+  .navb {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+  }
+  .navigation .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .fa {
+    margin-top: 0.5rem;
+  }
+  body > *:first-child {
+    margin-top: 100px; /* prend en compte la navbar qui devient plus haute */
+  }
+}
+/* ----------- Boutons Navbar ----------- */
+.fa {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.fa .btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #010100;   /* brandBlack */
+  color: #b28727;              /* goldLight */
+  border: 2px solid #b28727;   /* goldLight */
+  border-radius: 8px;
+  padding: 4px 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* Hover : inversion élégante */
+.fa .btn:hover {
+  background-color: #b28727;  /* goldLight */
+  color: #010100;             /* brandBlack */
+  border-color: #010100;
+  transform: translateY(-2px);
+  box-shadow: rgba(178, 135, 39, 0.4) 0px 4px 12px;
+}
+
+/* Icônes FontAwesome dans les boutons */
+.fa .btn svg {
+  font-size: 1rem;
+  color: inherit; /* prend la couleur du bouton */
+}
+
+/* Compteur du panier */
+.fa .btn span {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa a {
+  text-decoration: none !important;
+}
+
+.fa a:visited,
+.fa a:active {
+  color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fa .btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin-left: 6px;
+  }
+}

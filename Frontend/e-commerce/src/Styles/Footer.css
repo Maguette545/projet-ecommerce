@@ -1,0 +1,76 @@
+/* Footer */
+.footer {
+    background-color: #010100; /* couleur de fond du footer */
+    color: #e4c462; /* couleur du texte */
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    font-family: 'Arial', sans-serif;
+}
+h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #e4c462; /* couleur dorée pour les titres */
+}
+
+.footer-lien p a{
+    font-size: 14px;
+    color: #e4c462;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+a:hover {
+    color: #b28227; /* survol des liens */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.text-underline {
+  text-decoration: underline;
+  color: #e4c462;
+  font-weight: 800;
+  text-decoration-thickness: 2px; /* souligne bien visible */
+}
+.btn-politique {
+  background-color: rgb(82, 80, 80) !important; /* noir/gris très sombre */
+  border: 2px solid;
+  border-color: #b28227 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-politique:hover {
+  background-color: #333333; /* un peu plus clair au survol */
+  transform: scale(1.05);
+}
+
+.social-button {
+    width: 35px;
+    height: 35px;
+    color: #e4c462;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.social-button:hover {
+    color: #b28227;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #b28227;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #e4c462;
+}

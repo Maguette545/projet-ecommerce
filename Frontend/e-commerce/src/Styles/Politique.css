@@ -1,0 +1,63 @@
+.politique-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #010100; /* Deep Black */
+  color: #f5f5f5; /* texte clair pour lisibilité */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  line-height: 1.7;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.politique-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b28727; /* Light Gold */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #52401c; /* Dark Gold */
+  padding-bottom: 10px;
+}
+
+.politique-container section {
+  position: relative;
+  height: 200px;
+  margin-bottom: 35px;
+  padding-top: 150px;
+  padding: 15px;
+  background: #111; /* léger contraste sur les sections */
+  border-left: 5px solid #b28727; /* Gold accent */
+  border-radius: 8px;
+}
+
+.politique-container h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #b28727; /* Light Gold */
+  font-weight: 600;
+}
+
+.politique-container p,
+.politique-container li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.politique-container ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.politique-container a {
+  color: #b28727; /* Golden Brown */
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.politique-container a:hover {
+  color: #52401c; /* Dark Gold */
+}

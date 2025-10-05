@@ -1,0 +1,150 @@
+:root {
+  --brandBlack: #010100;
+  --goldLight: #b28727;
+  --goldDark: #52401c;
+  --goldBrown: #b28727;
+  --dangerRed: #ff4d4f;
+  --dangerRedHover: #d9363e;
+}
+
+/* Container principal */
+.user-manager {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* Titre */
+.manager-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--brandBlack);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Grid formulaire + table */
+.user-manager-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Formulaire utilisateur */
+.user-form-card {
+  flex: 1 1 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--goldLight);
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--goldDark);
+  box-shadow: 0 0 8px rgba(178,135,39,0.2);
+  background-color: #fff;
+}
+
+/* Boutons */
+.submit-btn, .cancel-btn, .edit-btn, .delete-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, var(--goldLight), var(--goldDark));
+  color: var(--brandBlack);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, var(--goldDark), var(--goldLight));
+  color: white;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background-color: var(--brandBlack);
+  color: var(--goldLight);
+}
+
+.cancel-btn:hover {
+  background-color: var(--goldDark);
+  color: white;
+}
+
+/* Table */
+.user-table-card {
+  flex: 2 1 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: var(--goldLight);
+  color: var(--brandBlack);
+}
+
+.user-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* Actions */
+.edit-btn {
+  background-color: var(--goldLight);
+  color: var(--brandBlack);
+  margin-right: 6px;
+}
+
+.edit-btn:hover {
+  background-color: var(--goldDark);
+  color: white;
+}
+
+.delete-btn {
+  background-color: var(--dangerRed);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: var(--dangerRedHover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-manager-grid {
+    flex-direction: column;
+  }
+}

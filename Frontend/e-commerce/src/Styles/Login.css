@@ -1,0 +1,156 @@
+:root {
+  --brandBlack: #010100;
+  --goldLight: #b28727;
+  --goldDark: #52401c;
+  --goldBrown: #b28727;
+}
+
+/* Container */
+.login-container {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 34px;
+  background: var(--brandBlack);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(178, 135, 39, 0.22);
+  color: white;
+}
+
+/* Titre */
+.form-title {
+  text-align: center;
+  color: var(--goldLight);
+  margin-bottom: 22px;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+/* Groupes */
+.login-form .form-group {
+  margin-bottom: 16px;
+}
+
+/* Labels */
+.login-form .form-label {
+  color: var(--goldBrown);
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs
+   - fond sombre par défaut
+   - fond blanc au focus ET quand le champ contient du texte (not(:placeholder-shown))
+*/
+.login-form .form-control.form-input {
+  width: 100%;
+  border: 1px solid var(--goldLight);
+  border-radius: 10px;
+  padding: 11px 12px;
+  background-color: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.22s ease;
+}
+
+.login-form .form-control.form-input::placeholder {
+  color: #bfbfbf;
+}
+
+/* Fond blanc quand on écrit (ou après saisie) */
+.login-form .form-control.form-input:focus,
+.login-form .form-control.form-input:not(:placeholder-shown) {
+  background-color: #ffffff;
+  color: var(--brandBlack);
+  border-color: var(--goldDark);
+  box-shadow: 0 0 10px rgba(178, 135, 39, 0.18);
+  outline: none;
+}
+
+/* Gérer l'autofill (Chrome) pour garder fond/blocs cohérents */
+.login-form input:-webkit-autofill,
+.login-form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+  -webkit-text-fill-color: var(--brandBlack) !important;
+}
+
+/* Checkbox group */
+.form-check-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Checkbox group */
+.form-check-group {
+  display: flex;
+  align-items: center; /* ✅ centre verticalement la case et le texte */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Case à cocher */
+.login-form .form-check-input {
+  width: 16px;   /* taille cohérente */
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--goldDark);
+  border: 2px solid var(--goldLight);
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle; /* ✅ alignement avec le texte */
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+/* Focus */
+.login-form .form-check-input:focus {
+  box-shadow: 0 0 6px rgba(178, 135, 39, 0.18);
+}
+
+/* Quand cochée */
+.login-form .form-check-input:checked {
+  background-color: var(--goldLight);
+  border-color: var(--goldDark);
+}
+
+/* Label */
+.login-form .form-check-label {
+  color: var(--goldBrown);
+  font-size: 0.95rem;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1; /* ✅ réduit la hauteur de ligne pour mieux coller à la case */
+}
+
+/* Bouton */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, var(--goldLight), var(--goldDark));
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, var(--goldDark), var(--goldLight));
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 22px;
+    margin: 30px 16px;
+  }
+
+  .form-title {
+    font-size: 1.4rem;
+  }
+}
